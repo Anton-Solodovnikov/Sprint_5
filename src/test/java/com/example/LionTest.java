@@ -33,7 +33,7 @@ public class LionTest {
     }
 
     @Test
-    public void doesHaveManeExceptionTest() throws Exception {
+    public void doesHaveManeExceptionTest(){
         String incorrectSex = "Питомец";
         String expectedMassage = "Используйте допустимые значения пола животного - самец или самка";
         try {
