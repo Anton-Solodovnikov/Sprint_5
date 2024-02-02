@@ -36,12 +36,14 @@ public class LionTest {
     public void doesHaveManeExceptionTest(){
         String incorrectSex = "Питомец";
         String expectedMassage = "Используйте допустимые значения пола животного - самец или самка";
+        String actualExceptMessage = null;
         try {
             Lion lion = new Lion(incorrectSex, feline);
         } catch (Exception exception) {
-            assertEquals("Неверный текст ошибки", expectedMassage, exception.getMessage());
+            actualExceptMessage = exception.getMessage();
+        } finally {
+            assertEquals("Неверный текст ошибки", expectedMassage, actualExceptMessage);
         }
-
     }
 
 }
